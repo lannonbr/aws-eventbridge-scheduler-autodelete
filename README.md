@@ -1,12 +1,9 @@
-# Welcome to your CDK JavaScript project
+# Autodeleting EventBridge Schedules using AWS Lambda Destinations
 
-This is a blank project for CDK development with JavaScript.
+This is a CDK project based upon the following blogpost by Yan Cui: [The biggest problem with EventBridge Scheduler and how to fix it](https://theburningmonk.com/2023/02/the-biggest-problem-with-eventbridge-scheduler-and-how-to-fix-it/)
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app. The build step is not required when using JavaScript.
+## Contents
 
-## Useful commands
-
-* `npm run test`         perform the jest unit tests
-* `cdk deploy`           deploy this stack to your default AWS account/region
-* `cdk diff`             compare deployed stack with current state
-* `cdk synth`            emits the synthesized CloudFormation template
+- `lib` contains the actual CDK Stack
+- `functions` contains a sample execution function as well as the function to delete the schedule upon completion
+- `create-fn` contains a CLI script to generate a schedule to run the above functions two minutes after being created
